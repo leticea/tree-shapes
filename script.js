@@ -11,6 +11,11 @@ let maxDepth = 8;
 let count = 0;
 let branchPropagation = 5;
 
+let createRect = (x, y, width, height, color) => {
+  context.fillStyle = color;
+  context.fillRect(x, y, width, height);
+};
+
 let drawLine = (x1, y1, x2, y2, thickness, color) => {
   context.lineWidth = thickness;
   context.strokeStyle = color;
@@ -50,4 +55,6 @@ let drawBranch = (x, y, height, thickness, angle, depth) => {
     );
   }
 };
+
+createRect(0, 0, canvas.width, canvas.height, "#EEEEEE");
 
