@@ -36,7 +36,18 @@ let drawBranch = (x, y, height, thickness, angle, depth) => {
     angleStart = angle - angleIncrement / 2 - (Math.trunc(branchPropagation / 2) - 1) * angleIncrement;
 
   } else {
-    
+    angleStart = angle - Math.trunc(branchPropagation / 2) * angleIncrement;
+  }
+
+  for (let i = 0; i < branchPropagation; i++) {
+    drawBranch(
+      endX, 
+      endY, 
+      newHeight, 
+      newThickness, 
+      angleStart + i * angleIncrement,
+      depth + 1
+    );
   }
 };
 
