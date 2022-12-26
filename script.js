@@ -1,16 +1,16 @@
 let canvas = document.getElementById("canvas");
 let context = canvas.getContext("2d");
 
-let angleIncrement = (30 * Math.PI) / 180;
+let angleIncrement = (30 * Math.PI) / 180; // change angle
 let startX = canvas.width / 2;
-let startY = canvas.height - 150;
+let startY = canvas.height;
 let height = (canvas.height * 7) / 24;
 
 // change the shapes
-let thickness = 0.5;
-let maxDepth = 6;
+let thickness = 1;
+let maxDepth = 10;
 let count = 0;
-let branchPropagation = 12;
+let branchPropagation = 4;
 
 let createRect = (x, y, width, height, color) => {
   context.fillStyle = color;
