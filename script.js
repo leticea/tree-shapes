@@ -27,5 +27,16 @@ let drawBranch = (x, y, height, thickness, angle, depth) => {
   let endY = y - height * Math.cos(angle);
 
   drawLine(x, y, endX, endY, thickness, "black");
+
+  let newHeight = (height * 8) / 12;
+  let newThickness = (thickness * 2) / 3;
+  let angleStart;
+
+  if (branchPropagation % 2 == 0) {
+    angleStart = angle - angleIncrement / 2 - (Math.trunc(branchPropagation / 2) - 1) * angleIncrement;
+
+  } else {
+    
+  }
 };
 
