@@ -11,7 +11,15 @@ let maxDepth = 8;
 let count = 0;
 let branchPropagation = 5;
 
-
+let drawLine = (x1, y1, x2, y2, thickness, color) => {
+  context.lineWidth = thickness;
+  context.strokeStyle = color;
+  context.beginPath()
+  context.moveTo(x1, y1)
+  context.lineTo(x2, y2)
+  context.closePath();
+  context.stroke();
+};
 
 let drawBranch = (x, y, height, thickness, angle, depth) => {
   if (depth > maxDepth) return;
