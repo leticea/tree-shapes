@@ -8,7 +8,7 @@
 <br>
 
 <p align="center">
-  <img alt="tree" src=".github/image.png">
+  <img alt="" src=".github/image.png">
 </p>
 
 ## Tree Shapes
@@ -17,7 +17,7 @@
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML) 
+- [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 - [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 
 ## 💻 Projeto

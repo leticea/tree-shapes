@@ -20,9 +20,9 @@ let createRect = (x, y, width, height, color) => {
 let drawLine = (x1, y1, x2, y2, thickness, color) => {
   context.lineWidth = thickness;
   context.strokeStyle = color;
-  context.beginPath()
-  context.moveTo(x1, y1)
-  context.lineTo(x2, y2)
+  context.beginPath();
+  context.moveTo(x1, y1);
+  context.lineTo(x2, y2);
   context.closePath();
   context.stroke();
 };
@@ -39,18 +39,20 @@ let drawBranch = (x, y, height, thickness, angle, depth) => {
   let angleStart;
 
   if (branchPropagation % 2 == 0) {
-    angleStart = angle - angleIncrement / 2 - (Math.trunc(branchPropagation / 2) - 1) * angleIncrement;
-
+    angleStart =
+      angle -
+      angleIncrement / 2 -
+      (Math.trunc(branchPropagation / 2) - 1) * angleIncrement;
   } else {
     angleStart = angle - Math.trunc(branchPropagation / 2) * angleIncrement;
   }
 
   for (let i = 0; i < branchPropagation; i++) {
     drawBranch(
-      endX, 
-      endY, 
-      newHeight, 
-      newThickness, 
+      endX,
+      endY,
+      newHeight,
+      newThickness,
       angleStart + i * angleIncrement,
       depth + 1
     );
@@ -59,4 +61,3 @@ let drawBranch = (x, y, height, thickness, angle, depth) => {
 
 createRect(0, 0, canvas.width, canvas.height, "#EEEEEE");
 drawBranch(startX, startY, height, thickness, 0, Math.PI / 2);
-
